@@ -1,3 +1,7 @@
-﻿  Menu.cpp
+﻿  main.cpp
+c:\users\aaron\documents\3rd year\c++\quiz\quiz\main.cpp(58): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+c:\users\aaron\documents\3rd year\c++\quiz\quiz\main.cpp(33): warning C4101: 'wrongAnswer1': unreferenced local variable
+c:\users\aaron\documents\3rd year\c++\quiz\quiz\main.cpp(34): warning C4101: 'wrongAnswer2': unreferenced local variable
+c:\users\aaron\documents\3rd year\c++\quiz\quiz\main.cpp(35): warning C4101: 'wrongAnswer3': unreferenced local variable
   Quiz.vcxproj -> C:\Users\aaron\Documents\3rd year\c++\Quiz\Debug\Quiz.exe
   Quiz.vcxproj -> C:\Users\aaron\Documents\3rd year\c++\Quiz\Debug\Quiz.pdb (Partial PDB)
