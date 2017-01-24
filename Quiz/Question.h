@@ -15,7 +15,14 @@ public:
 	std::string choice4;
 	std::string question;
 	sf::Text text;
+	sf::Text choices[4];
 
 	void draw(sf::RenderWindow &window);
+	void MoveUp();
+	void MoveDown();
+	int GetPressedItem() { return selectedItemIndex; }
+
+private:
+	int selectedItemIndex;
 };
 
