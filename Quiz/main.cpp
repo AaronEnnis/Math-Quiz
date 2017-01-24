@@ -183,16 +183,43 @@ int main()
 						switch (questions[loop].GetPressedItem())
 						{
 						case 0:
-							loop++;
+							if (questions[loop].choice1==questions[loop].answer)
+							{
+								std::cout << "correct" << std::endl;
+							}
+							else {
+								std::cout << "wrong" << std::endl;
+							}
 							break;
 						case 1:
+							if (questions[loop].choice2 == questions[loop].answer)
+							{
+								std::cout << "correct" << std::endl;
+							}
+							else {
+								std::cout << "wrong" << std::endl;
+							}
 							break;
 						case 2:
+							if (questions[loop].choice3 == questions[loop].answer)
+							{
+								std::cout << "correct" << std::endl;
+							}
+							else {
+								std::cout << "wrong" << std::endl;
+							}
 							break;
 						case 3:
-							window.close();
+							if (questions[loop].choice4 == questions[loop].answer)
+							{
+								std::cout << "correct" << std::endl;
+							}
+							else {
+								std::cout << "wrong" << std::endl;
+							}
 							break;
 						}
+						loop++;
 					}
 					break;
 				}
