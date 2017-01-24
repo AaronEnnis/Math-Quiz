@@ -9,41 +9,74 @@ C00190504
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 
 int main()
 {
-	std::vector <Question> question(10);
+	std::vector <Question> questions;
 	std::ifstream myfile("questions.txt");
 	std::string line;
 
-	question[0].answer = 4;
-	question[1].answer = 8;
-	question[2].answer = 10;
-	question[3].answer = 4;
-	question[4].answer = 6;
-	question[5].answer = 11;
-	question[6].answer = 6;
-	question[7].answer = 11;
-	question[8].answer = 3;
-	question[9].answer = 4;
-	
+	sf::Font font;
+	if (!font.loadFromFile("arial.ttf"))
+	{
+		// handle error
+	}
+
 	int score = 0;
 	bool play = false;
 
-	int wrongAnswer1 = rand() % 13 + 1;
-	int wrongAnswer2 = rand() % 13 + 1;
-	int wrongAnswer3 = rand() % 13 + 1;
-
 	if (myfile.is_open())
 	{
-		int i = 0;
-		float j = 0;
+		int i = 1;
+		int j = 0;
+		std::string q;
+		std::string c1;
+		std::string c2;
+		std::string c3;
+		std::string c4;
+		std::string answer;
+
 		while (getline(myfile, line))
-		{
-			question[i].text.setString(line);
-			question[i].text.setPosition(sf::Vector2f(50, 50 + j));
+		{			
+			if (i == 1)
+			{
+				q = line;
+			}
+			else if (i == 2)
+			{
+				c1 = line;
+			}
+			else if (i == 3)
+			{
+				c2 = line;
+			}
+			else if (i == 4)
+			{
+				c3 = line;
+			}
+			else if (i == 5)
+			{
+				c4 = line;
+			}
+			else if(i == 6)
+			{
+				answer = line;
+				Question question(q, c1, c2, c3, c4, answer);				
+				questions.push_back(question);
+				questions[j].text.setFont(font);
+				questions[j].text.setFillColor(sf::Color::Red);
+				questions[j].text.setString(questions[j].question);
+				questions[j].text.setPosition(sf::Vector2f(600 / 2, 600 / (MAX_NUMBER_OF_ITEMS + 1) * (j+1)));
+				i = 0;
+				j++;				
+			}			
 			i++;
-			j = j + 50;
+		}
+
+		for (unsigned i = 0; i < questions.size(); i++)
+		{
+			std::cout << questions.at(i).question << std::endl;
 		}
 		myfile.close();
 	}
@@ -114,10 +147,11 @@ int main()
 		}
 		else
 		{
-			for (int i = 0; i < 10; i++)
+			for (int i = 0; i < questions.size(); i++)
 			{
-				question[i].draw(window);
+				questions.at(i).draw(window);
 			}
+			
 		}
 		window.display();
 	}

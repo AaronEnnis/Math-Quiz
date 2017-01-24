@@ -1,7 +1,6 @@
 ﻿  main.cpp
-c:\users\aaron\documents\3rd year\c++\quiz\quiz\main.cpp(58): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
-c:\users\aaron\documents\3rd year\c++\quiz\quiz\main.cpp(33): warning C4101: 'wrongAnswer1': unreferenced local variable
-c:\users\aaron\documents\3rd year\c++\quiz\quiz\main.cpp(34): warning C4101: 'wrongAnswer2': unreferenced local variable
-c:\users\aaron\documents\3rd year\c++\quiz\quiz\main.cpp(35): warning C4101: 'wrongAnswer3': unreferenced local variable
+c:\users\aaron\documents\3rd year\c++\quiz\quiz\main.cpp(70): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\aaron\documents\3rd year\c++\quiz\quiz\main.cpp(91): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+c:\users\aaron\documents\3rd year\c++\quiz\quiz\main.cpp(150): warning C4018: '<': signed/unsigned mismatch
   Quiz.vcxproj -> C:\Users\aaron\Documents\3rd year\c++\Quiz\Debug\Quiz.exe
   Quiz.vcxproj -> C:\Users\aaron\Documents\3rd year\c++\Quiz\Debug\Quiz.pdb (Partial PDB)
