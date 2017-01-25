@@ -42,3 +42,9 @@ void Question::MoveDown()
 		choices[selectedItemIndex].setFillColor(sf::Color::Red);
 	}
 }
+void Question::resetIndex()
+{
+	choices[selectedItemIndex].setFillColor(sf::Color::White);
+	selectedItemIndex = 0;
+	choices[selectedItemIndex].setFillColor(sf::Color::Red);
+}

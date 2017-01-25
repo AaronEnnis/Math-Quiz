@@ -1,4 +1,4 @@
 ﻿  main.cpp
-c:\users\aaron\documents\3rd year\c++\quiz\quiz\main.cpp(125): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
+c:\users\aaron\documents\3rd year\c++\quiz\quiz\main.cpp(153): warning C4244: 'argument': conversion from 'unsigned int' to 'float', possible loss of data
   Quiz.vcxproj -> C:\Users\aaron\Documents\3rd year\c++\Quiz\Debug\Quiz.exe
   Quiz.vcxproj -> C:\Users\aaron\Documents\3rd year\c++\Quiz\Debug\Quiz.pdb (Partial PDB)

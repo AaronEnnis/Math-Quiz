@@ -21,6 +21,7 @@ public:
 	void MoveUp();
 	void MoveDown();
 	int GetPressedItem() { return selectedItemIndex; }
+	void resetIndex();
 
 private:
 	int selectedItemIndex;
